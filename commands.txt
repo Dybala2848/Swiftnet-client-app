@@ -1,0 +1,37 @@
+Compiled executable name : "swiftnet"
+
+Built on Ubuntu 64bit
+
+
+./../go/bin/go get -u github.com/mgutz/ansi
+
+
+itrue-iperf3 -s
+
+Requires "go" sdk
+
+	download go... tar.gz
+	Add 'tun', 'socks' dependencies to go/src
+
+// To add "gcc" compiler to the O.S
+apt update
+apt install build-essential
+
+// To add "ifconfig" tool
+apt install net-tools
+
+
+building:
+	
+	copy tun, socks to go/src
+	./../go/bin/go build
+	
+run server side:
+	./swiftnet server
+	
+run client:
+	./swiftnet client <server_ip:9000> interface1 interface2
+	./changegateway.sh
+	
+	
+	
